@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<repository
+name="DesktopAppRepository"
+id="93f4fc44-969f-40cd-b319-9bba4e12faba">
+  <codegen
+  classname="DesktopAppRepository"
+  namespace="DesktopApp"/>
+  <rootfolder
+  name="Root"
+  id="66b73a85-0190-439b-9fb2-6e1480bac622"
+  searchtimeout="30000ms"
+  capname="unknown"
+  isrooted="True"
+  usecache="True">
+    <basepath/>
+  </rootfolder>
+  <variables/>
+</repository>
