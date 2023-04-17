@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <recordtable
 embeddedrepository="False"
-id="3067d45c-b1c8-4ee1-ab8b-ac7363e8b2c7"
+id="bb8b3ec1-ac49-4f9e-a2a8-bf4b12d351e5"
 mode="Global">
 	<repeatcount>
 		1
@@ -19,17 +19,36 @@ mode="Global">
 		True
 	</useDefaultItemLogging>
 	<codegen
-	classname="Recording1"
-	namespace="DesktopApp">
+	classname="CloseApp"
+	namespace="DesktopApp.Recordings">
 	</codegen>
 	<variables>
+		<var
+		id="a2156a75-ff6f-4f10-b066-c4d1b3f6c9a3"
+		name="varAppPid">
+		</var>
 	</variables>
 	<recorditems>
+		<closeapprecorditem
+		enabled="True"
+		graceperiod="0ms"
+		method="CloseWindowByProcessID"
+		optional="False"
+		searchpropertyid="6c00c7b4-28f4-4fad-afb1-9ee61bd1e438">
+			<comment>
+			</comment>
+			<bindings>
+				<binding
+				target="ProcessID"
+				variable="varAppPid">
+				</binding>
+			</bindings>
+		</closeapprecorditem>
 	</recorditems>
 	<repository
 	id="93f4fc44-969f-40cd-b319-9bba4e12faba"
 	name="DesktopAppRepository"
-	relativepath="DesktopAppRepository.rxrep">
+	relativepath="..\DesktopAppRepository.rxrep">
 		<codegen
 		classname="DesktopAppRepository"
 		namespace="DesktopApp">
@@ -41,7 +60,7 @@ mode="Global">
 	</repository>
 	<usercodefile
 	lang="CSharp">
-		Recording1.UserCode.cs
+		CloseApp.UserCode.cs
 	</usercodefile>
 	<references>
 	</references>

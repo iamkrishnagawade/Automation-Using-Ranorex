@@ -13,10 +13,20 @@
     <RANOREX_BIN_PATH Condition=" '$(RANOREX_BIN_PATH)' == '' ">$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Ranorex\Studio', 'InstallDir', null, RegistryView.Registry64, RegistryView.Registry32))\Bin</RANOREX_BIN_PATH>
     <RanorexTargetsPath>$(RANOREX_BIN_PATH)\Ranorex.MSBuild.Targets</RanorexTargetsPath>
     <projectdefaultrepository>df474905-d75f-46f5-b1b9-2fc8f163a61e</projectdefaultrepository>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
     <PlatformTarget>x86</PlatformTarget>
-    <Prefer32Bit>True</Prefer32Bit>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -26,6 +36,8 @@
     <Optimize>False</Optimize>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -134,23 +146,79 @@
     <Compile Include="Program.cs">
       <id>82770efd-c912-4bda-adc7-388b627b7901</id>
     </Compile>
-    <Compile Include="Recording1.cs">
-      <BoundTo>0e6c7088-2145-4403-adb7-3098e8394ef7</BoundTo>
-      <DependentUpon>Recording1.rxrec</DependentUpon>
+    <Compile Include="Recordings\CloseApp.cs">
+      <BoundTo>4e401d00-df2d-47eb-b4d1-7fe632410dd3</BoundTo>
+      <DependentUpon>CloseApp.rxrec</DependentUpon>
       <RecorderCode>true</RecorderCode>
-      <id>1cb8f3e6-2dd2-4201-a044-64dd408c2ca3</id>
+      <id>696163ba-7a5f-4e32-b537-d037be4c58b3</id>
     </Compile>
-    <Compile Include="Recording1.UserCode.cs">
-      <BoundTo>0e6c7088-2145-4403-adb7-3098e8394ef7</BoundTo>
-      <DependentUpon>Recording1.rxrec</DependentUpon>
+    <Compile Include="Recordings\CloseApp.UserCode.cs">
+      <BoundTo>4e401d00-df2d-47eb-b4d1-7fe632410dd3</BoundTo>
+      <DependentUpon>CloseApp.rxrec</DependentUpon>
       <UserCode>true</UserCode>
-      <id>3d9b69cf-7039-443e-9567-f07949d3cff5</id>
+      <id>efa71c57-8731-4725-9887-38ec94ac5aa0</id>
+    </Compile>
+    <Compile Include="Recordings\EnterYourName.cs">
+      <BoundTo>cd201fd4-111c-41eb-b944-01c9f49f0111</BoundTo>
+      <DependentUpon>EnterYourName.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>8528ffd6-e4d3-4d89-a75a-6ebd818f0b79</id>
+    </Compile>
+    <Compile Include="Recordings\EnterYourName.UserCode.cs">
+      <BoundTo>cd201fd4-111c-41eb-b944-01c9f49f0111</BoundTo>
+      <DependentUpon>EnterYourName.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>79f4e59c-4cd4-4424-b0b9-535542d1f393</id>
+    </Compile>
+    <Compile Include="Recordings\ResetForm.cs">
+      <BoundTo>8cbca332-79e9-4fd3-92d5-4997a11e0fc6</BoundTo>
+      <DependentUpon>ResetForm.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>5aa4c256-a2b4-462f-8c32-97c630c1761b</id>
+    </Compile>
+    <Compile Include="Recordings\ResetForm.UserCode.cs">
+      <BoundTo>8cbca332-79e9-4fd3-92d5-4997a11e0fc6</BoundTo>
+      <DependentUpon>ResetForm.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>2f4d4f24-4977-4a85-82d5-21ec1a349925</id>
+    </Compile>
+    <Compile Include="Recordings\StartApp.cs">
+      <BoundTo>52b41f32-80ec-4b37-9645-22314ffcc96a</BoundTo>
+      <DependentUpon>StartApp.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>1ffcc704-5139-49a0-b2b2-2b721981910d</id>
+    </Compile>
+    <Compile Include="Recordings\StartApp.UserCode.cs">
+      <BoundTo>52b41f32-80ec-4b37-9645-22314ffcc96a</BoundTo>
+      <DependentUpon>StartApp.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>4d2605ab-4dd9-470b-b26d-4d4f88af5050</id>
+    </Compile>
+    <Compile Include="Recordings\ValidateWelcomeMessage.cs">
+      <BoundTo>78808c05-8866-45e3-b1d6-309be3eab480</BoundTo>
+      <DependentUpon>ValidateWelcomeMessage.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>2df21bb8-c08d-4a03-a864-3f2560f75cd9</id>
+    </Compile>
+    <Compile Include="Recordings\ValidateWelcomeMessage.UserCode.cs">
+      <BoundTo>78808c05-8866-45e3-b1d6-309be3eab480</BoundTo>
+      <DependentUpon>ValidateWelcomeMessage.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>593c1b86-24eb-426a-9fbd-d41ed082095d</id>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Introduction.rxtst">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>d423bc81-3336-433c-b423-e4583f70e037</id>
+    </Content>
     <None Include="app.config">
       <id>cbdd7a5f-5e2f-4da2-b36e-755e1759ab13</id>
     </None>
+    <Content Include="DesktopApp.rxsqc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>b5cd211f-938c-4788-8561-3639c888c7e6</id>
+    </Content>
     <None Include="DesktopAppRepository.rximg">
       <BoundTo>df474905-d75f-46f5-b1b9-2fc8f163a61e</BoundTo>
       <DependentUpon>DesktopAppRepository.rxrep</DependentUpon>
@@ -162,10 +230,33 @@
       <repoid>93f4fc44-969f-40cd-b319-9bba4e12faba</repoid>
       <reporootid>66b73a85-0190-439b-9fb2-6e1480bac622</reporootid>
     </None>
-    <None Include="Recording1.rxrec">
+    <None Include="Recordings\CloseApp.rxrec">
       <BoundTo>df474905-d75f-46f5-b1b9-2fc8f163a61e</BoundTo>
-      <id>0e6c7088-2145-4403-adb7-3098e8394ef7</id>
-      <recordtableid>3067d45c-b1c8-4ee1-ab8b-ac7363e8b2c7</recordtableid>
+      <id>4e401d00-df2d-47eb-b4d1-7fe632410dd3</id>
+      <recordtableid>bb8b3ec1-ac49-4f9e-a2a8-bf4b12d351e5</recordtableid>
+    </None>
+    <None Include="Recordings\EnterYourName.rxrec">
+      <BoundTo>df474905-d75f-46f5-b1b9-2fc8f163a61e</BoundTo>
+      <id>cd201fd4-111c-41eb-b944-01c9f49f0111</id>
+      <recordtableid>07cc52aa-d7be-4665-bebe-6fdfcbb23f73</recordtableid>
+    </None>
+    <None Include="Recordings\ResetForm.rxrec">
+      <BoundTo>df474905-d75f-46f5-b1b9-2fc8f163a61e</BoundTo>
+      <id>8cbca332-79e9-4fd3-92d5-4997a11e0fc6</id>
+      <recordtableid>772208fc-fcb8-43f3-ac60-41afebb8fd36</recordtableid>
+    </None>
+    <None Include="Recordings\StartApp.rxrec">
+      <BoundTo>df474905-d75f-46f5-b1b9-2fc8f163a61e</BoundTo>
+      <id>52b41f32-80ec-4b37-9645-22314ffcc96a</id>
+      <recordtableid>18de6536-aa97-43cf-be4b-7dd286185dd2</recordtableid>
+    </None>
+    <None Include="Recordings\ValidateWelcomeMessage.rxrec">
+      <BoundTo>df474905-d75f-46f5-b1b9-2fc8f163a61e</BoundTo>
+      <id>78808c05-8866-45e3-b1d6-309be3eab480</id>
+      <recordtableid>b8e89bf3-b59a-4003-81d6-e4e9fe0981b5</recordtableid>
+    </None>
+    <None Include="RxDemoApp\RxDemoApp.exe">
+      <id>b9479941-0c25-4d13-a1aa-2c34e7dcafd8</id>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -173,10 +264,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <id>d8e22d21-2cf9-456b-b8d2-bb70a743939d</id>
     </Content>
-    <Content Include="DesktopApp.rxtst">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <id>5c6f610b-3a26-4873-b9fc-8bcfcf06690a</id>
-    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RxDemoApp">
+      <id>e0452e24-2815-4cc0-bd71-5a2ad4985cfc</id>
+    </Folder>
+    <Folder Include="Recordings">
+      <id>6cc08103-8533-4a5b-81f2-0f5c04000f77</id>
+    </Folder>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(RanorexTargetsPath)" Condition="Exists('$(RanorexTargetsPath)')" />

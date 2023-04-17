@@ -20,33 +20,33 @@ using Ranorex.Core;
 using Ranorex.Core.Testing;
 using Ranorex.Core.Repository;
 
-namespace DesktopApp
+namespace DesktopApp.Recordings
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Recording1 recording.
+    ///The ResetForm recording.
     /// </summary>
-    [TestModule("3067d45c-b1c8-4ee1-ab8b-ac7363e8b2c7", ModuleType.Recording, 1)]
-    public partial class Recording1 : ITestModule
+    [TestModule("772208fc-fcb8-43f3-ac60-41afebb8fd36", ModuleType.Recording, 1)]
+    public partial class ResetForm : ITestModule
     {
         /// <summary>
-        /// Holds an instance of the DesktopAppRepository repository.
+        /// Holds an instance of the global::DesktopApp.DesktopAppRepository repository.
         /// </summary>
-        public static DesktopAppRepository repo = DesktopAppRepository.Instance;
+        public static global::DesktopApp.DesktopAppRepository repo = global::DesktopApp.DesktopAppRepository.Instance;
 
-        static Recording1 instance = new Recording1();
+        static ResetForm instance = new ResetForm();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Recording1()
+        public ResetForm()
         {
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Recording1 Instance
+        public static ResetForm Instance
         {
             get { return instance; }
         }
@@ -79,6 +79,10 @@ namespace DesktopApp
 
             Init();
 
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'RxMainFrame.TabPageList.IntroductionContent.ResetBtn' at Center.", repo.RxMainFrame.TabPageList.IntroductionContent.ResetBtnInfo, new RecordItemIndex(0));
+            repo.RxMainFrame.TabPageList.IntroductionContent.ResetBtn.Click();
+            Delay.Milliseconds(0);
+            
         }
 
 #region Image Feature Data

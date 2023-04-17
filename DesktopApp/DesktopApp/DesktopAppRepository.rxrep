@@ -1,18 +1,107 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<repository
-name="DesktopAppRepository"
-id="93f4fc44-969f-40cd-b319-9bba4e12faba">
-  <codegen
-  classname="DesktopAppRepository"
-  namespace="DesktopApp"/>
-  <rootfolder
-  name="Root"
-  id="66b73a85-0190-439b-9fb2-6e1480bac622"
-  searchtimeout="30000ms"
-  capname="unknown"
-  isrooted="True"
-  usecache="True">
-    <basepath/>
-  </rootfolder>
-  <variables/>
+﻿<repository
+id="93f4fc44-969f-40cd-b319-9bba4e12faba"
+name="DesktopAppRepository">
+	<codegen
+	classname="DesktopAppRepository"
+	namespace="DesktopApp">
+	</codegen>
+	<rootfolder
+	capname="unknown"
+	id="66b73a85-0190-439b-9fb2-6e1480bac622"
+	isrooted="True"
+	name="Root"
+	searchtimeout="0ms"
+	usecache="True">
+		<appfolder
+		addcaps="form,control,nativewindow"
+		capname="form"
+		id="9020b765-0723-4a51-a4ec-bc18057baf3e"
+		isrooted="True"
+		name="RxMainFrame"
+		refpath="/form[@automationid='RxMainFrame']"
+		searchtimeout="30000ms"
+		usecache="True">
+			<folder
+			capname="tabpagelist"
+			id="17877f4d-d318-43ca-b0fb-effae2f3dc13"
+			isrooted="True"
+			name="TabPageList"
+			refimgid="9484f38f-1ff8-4f23-ad79-05d8c5c72c1e"
+			searchtimeout="30000ms"
+			usecache="False">
+				<folder
+				capname="tabpage"
+				id="582ee3c6-e9f6-4dde-983f-afb8e7a3e0f5"
+				isrooted="True"
+				name="IntroductionContent"
+				refimgid="e5e361ee-3855-4f1f-80ac-f8e7809f7fc9"
+				searchtimeout="30000ms"
+				usecache="False">
+					<item
+					capname="text"
+					id="5dd93dae-a76f-48eb-8d33-71a80af59711"
+					name="TxtUsername"
+					refimgid="3e4c2fac-d57c-48e5-b88d-5b2c07d87612"
+					robustPath="/form[@automationid='RxMainFrame']//tabpagelist/tabpage[@controlname='RxTabIntroduction']/element"
+					searchtimeout="30000ms">
+						/form[@automationid='RxMainFrame']//tabpagelist/tabpage[@controlname='RxTabIntroduction']/text[@controlname='txtUserName']
+					</item>
+					<item
+					capname="button"
+					id="87b37197-6e6f-4985-95ef-231b63d84a4c"
+					name="SubmitBtn"
+					robustPath="/form[@automationid='RxMainFrame']//tabpagelist/tabpage[@controlname='RxTabIntroduction']/element"
+					searchtimeout="30000ms">
+						/form[@automationid='RxMainFrame']//tabpagelist/tabpage[@controlname='RxTabIntroduction']/button[@controlname='btnSubmitUserName']
+					</item>
+					<item
+					capname="link"
+					id="1760ec39-1792-47e1-be4d-d3f8ec44a40d"
+					name="ResetBtn"
+					refimgid="46cd9a05-187f-4cba-8571-f8a69ef0d79b"
+					robustPath="/form[@automationid='RxMainFrame']//tabpagelist/tabpage[@controlname='RxTabIntroduction']/element"
+					searchtimeout="30000ms">
+						/form[@automationid='RxMainFrame']//tabpagelist/tabpage[@controlname='RxTabIntroduction']/link[@controlname='RxLinkBtnReset']
+					</item>
+					<item
+					capname="text"
+					id="ddb429bb-126d-48f3-a587-b362e4985e48"
+					name="WelcomeMsg"
+					robustPath="/form[@automationid='RxMainFrame']//tabpagelist/tabpage[@controlname='RxTabIntroduction']/element"
+					searchtimeout="30000ms">
+						/form[@automationid='RxMainFrame']//tabpagelist/tabpage[@controlname='RxTabIntroduction']/text[@controlname='lblWelcomeMessage']
+					</item>
+					<basepath>
+						/form[@automationid='RxMainFrame']//tabpagelist/tabpage[@controlname='RxTabIntroduction']
+					</basepath>
+				</folder>
+				<item
+				capname="tabpage"
+				id="a8ac7857-d0eb-42b2-bbe5-113544e8af1a"
+				name="IntroducionTab"
+				refimgid="9c1b0a8e-1db0-4435-a929-dc77d095c5fe"
+				robustPath="/form[@automationid='RxMainFrame']//tabpagelist/element"
+				searchtimeout="30000ms">
+					/form[@automationid='RxMainFrame']//tabpagelist/tabpage[@accessiblename='Introduction']
+				</item>
+				<basepath>
+					/form[@automationid='RxMainFrame']//tabpagelist
+				</basepath>
+			</folder>
+			<basepath>
+				/form[@automationid='RxMainFrame']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
+jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAB9SURBVDhPY0AGwcHBi4D4NxD/x4NB8r+DgoJa
+odogACj4BqQAyiUdwDQ/YBfa+oBN6CA+DNaADmAGAAlGIGbCh8Ea0AHIACD+B8RficFQbQgAFAQa
+TjwABuI3KBMCSDEgICBAeNSAUQOwGgACIEOAEt8JYaC6H0AaaAADAwC5s5VutWbaWgAAAABJRU5E
+rkJggg==
+			</icon>
+		</appfolder>
+		<basepath>
+		</basepath>
+	</rootfolder>
+	<variables>
+	</variables>
 </repository>

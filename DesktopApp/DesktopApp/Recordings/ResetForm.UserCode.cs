@@ -20,9 +20,9 @@ using Ranorex.Core;
 using Ranorex.Core.Repository;
 using Ranorex.Core.Testing;
 
-namespace DesktopApp
+namespace DesktopApp.Recordings
 {
-    public partial class Recording1
+    public partial class ResetForm
     {
         /// <summary>
         /// This method gets called right after the recording has been started.
