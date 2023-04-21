@@ -257,6 +257,7 @@
     </None>
     <None Include="RxDemoApp\RxDemoApp.exe">
       <id>b9479941-0c25-4d13-a1aa-2c34e7dcafd8</id>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
